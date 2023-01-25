@@ -1,9 +1,8 @@
 # adblock
 trial automatic update rule adblock openclash
 
-
-Untuk menggunakan, edit config.yaml pada /etc/openclash/config/config.yaml seperti ini:
-
+Untuk menggunakan, edit `config.yaml` pada `/etc/openclash/config/config.yaml` seperti ini:
+```
 rule-providers:
   easylist_adservers:
     type: http
@@ -14,3 +13,4 @@ rule-providers:
     
 rules:
 - RULE-SET,easylist_adservers,REJECT
+```
