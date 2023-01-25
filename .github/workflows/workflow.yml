@@ -11,10 +11,9 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v3
     - name: Show python version
-      run: echo $PATH
       run: python3 --version
     - name: Run a script
-      run: ./get_adblock_list.py
+      run: python3 get_adblock_list.py
     - name: Commit changes
       run: |
         git config --local user.email "github-actions[bot]@users.noreply.github.com"
@@ -23,4 +22,4 @@ jobs:
         git commit -m "Automatic update easylist_adservers.yaml"
     - name: Push changes
       run: |
-        git push
+        git push origin main
