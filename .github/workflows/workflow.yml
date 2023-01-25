@@ -1,13 +1,28 @@
-name: Update adblock list
+name: Update easylist_adservers.yaml
+
 on:
   schedule:
-    - cron: '0 0 * * *'
+    - cron:  '0 1 * * *'
+
 jobs:
-  update_adblock:
+  update:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
-    - name: Update adblock list
-      run: python adblock_update.py
-    - name: Push to main
-      run: git push origin main
+    - uses: actions/checkout@v3
+    - name: Update easylist_adservers.yaml
+      run: |
+        curl -s https://raw.githubusercontent.com/easylist/easylist/master/easylist/easylist_adservers.txt -o easylist_adservers.txt
+        sed -i '/^!/d' easylist_adservers.txt
+        sed -i 's/||//' easylist_adservers.txt
+        sed -i 's/\^//' easylist_adservers.txt
+        sed -i '1i payload:' easylist_adservers.txt
+        sed -i 's/^/  - DOMAIN,/' easylist_adservers.txt
+    - name: Commit changes
+      run: |
+        git config --local user.email "github-actions[bot]@users.noreply.github.com"
+        git config --local user.name "github-actions[bot]"
+        git add easylist_adservers.txt
+        git commit -m "Automatic update easylist_adservers.yaml"
+    - name: Push changes
+      run: |
+        git push
