@@ -11,7 +11,7 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v3
     - name: Show python version
-    - run: python3 --version
+      run: python3 --version
     - name: Run a script
       run: python3 get_adblock_list.py
     - name: Commit changes
