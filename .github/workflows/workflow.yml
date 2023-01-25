@@ -9,3 +9,5 @@ jobs:
     - uses: actions/checkout@v2
     - name: Update adblock list
       run: python adblock_update.py
+    - name: Push to main
+      run: git push origin main
