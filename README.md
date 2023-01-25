@@ -1,2 +1,2 @@
 # adblock
-trial automatic update adblock
+trial automatic update rule adblock openclash
