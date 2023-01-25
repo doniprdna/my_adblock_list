@@ -13,7 +13,7 @@ jobs:
       - name: adblock
         run: |
           echo "Downloading easylist_adservers block list..."
-          curl -s https://github.com/easylist/easylist/blob/master/easylist/easylist_adservers.txt -o filter.txt
+          curl -s https://raw.githubusercontent.com/easylist/easylist/master/easylist/easylist_adservers.txt -o filter.txt
           grep -o -P '(?<=^\|\|).*(?=\^$)' filter.txt | grep -v '\*' > easylist_adservers.yaml
           sed -ie '/^#/! s/^/  - DOMAIN,/' easylist_adservers.yaml
           sed -i '1i payload:' easylist_adservers.yaml
