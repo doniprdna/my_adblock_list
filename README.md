@@ -1,2 +1,2 @@
-# trial-adblock
+# adblock
 trial automatic update adblock
