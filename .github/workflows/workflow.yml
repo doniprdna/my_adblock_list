@@ -1,23 +1,18 @@
-name: Download adblock source list
+import requests
 
-on:
-  schedule:
-    - cron: 0 */12 * * *
-  workflow_dispatch:
+def get_adblock_list():
+    try:
+        r = requests.get("https://raw.githubusercontent.com/easylist/easylist/master/easylist/easylist_adservers.txt")
+        adblock_list = r.text.split("\n")
+        adblock_list = [line.replace("||", "").replace("^", "") for line in adblock_list if not line.startswith('!')]
+        adblock_list = ["  - DOMAIN, " + domain for domain in adblock_list if domain]
+        adblock_list.insert(0, "payload:")
+        return adblock_list
+    except Exception as e:
+        print(e)
+        return None
 
-jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - name: adblock
-        run: |
-          echo "Downloading easylist_adservers block list..."
-          curl -s https://raw.githubusercontent.com/easylist/easylist/master/easylist/easylist_adservers.txt -o filter.txt
-          grep -o -P '(?<=^\|\|).*(?=\^$)' filter.txt | grep -v '\*' > easylist_adservers.yaml
-          sed -ie '/^#/! s/^/  - DOMAIN,/' easylist_adservers.yaml
-          sed -i '1i payload:' easylist_adservers.yaml
-          rm -fr easylist_adservers.yamle filter.txte filter.txt
-      - uses: stefanzweifel/git-auto-commit-action@v4
-        with:
-          commit_message: Automatic update
+adblock_list = get_adblock_list()
+if adblock_list:
+    with open("easylist_adservers.yaml", "w", encoding='utf-8') as f:
+        f.write("\n".join(adblock_list))
