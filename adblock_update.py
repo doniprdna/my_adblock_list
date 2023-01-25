@@ -12,5 +12,5 @@ def get_adblock_list():
 
 adblock_list = get_adblock_list()
 if adblock_list:
-    with open("adblock_list.txt", "w") as f:
+    with open("adblock_list.yaml", "w", encoding='utf-8') as f:
         f.write("\n".join(adblock_list))
