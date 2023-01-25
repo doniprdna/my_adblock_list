@@ -22,4 +22,4 @@ jobs:
         git commit -m "Automatic update easylist_adservers.yaml"
     - name: Push changes
       run: |
-        git push origin main
+        git push
