@@ -13,5 +13,4 @@ rule-providers:
     interval: 86400 # Update rules every 24 hours
     
 rules:
-# Block ads
 - RULE-SET,easylist_adservers,REJECT
