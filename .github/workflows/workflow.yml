@@ -1,13 +1,24 @@
-name: Update adblock list
+name: Download adblock source list
+
 on:
   schedule:
-    - cron: '0 0 * * *'
+    - cron: 0 */12 * * *
+  workflow_dispatch:
+
 jobs:
-  update_adblock:
+  build:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
-    - name: Update adblock list
-      run: python adblock_update.py
-    - name: Push to main
-      run: git push origin main
+      - uses: actions/checkout@v3
+      - name: adblock
+        run: |
+          echo "Downloading easylist_adservers block list..."
+          curl -s https://github.com/easylist/easylist/blob/master/easylist/easylist_adservers.txt -o filter.txt
+          grep -o -P '(?<=^\|\|).*(?=\^$)' filter.txt | grep -v '\*' > AdguardDNS.yaml
+          sed -ie '/^#/! s/^/  - DOMAIN,/' easylist_adservers.yaml
+          sed -i '1i payload:' easylist_adservers.yaml
+          rm -fr easylist_adservers.yamle filter.txte filter.txt
+
+      - uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: Automatic update
