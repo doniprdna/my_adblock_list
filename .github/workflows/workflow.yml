@@ -1,0 +1,11 @@
+name: Update adblock list
+on:
+  schedule:
+    - cron: '0 0 * * *'
+jobs:
+  update_adblock:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Update adblock list
+      run: python adblock_update.py
