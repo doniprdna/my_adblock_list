@@ -1189,7 +1189,6 @@ payload:
   - DOMAIN, adherencestated.com
   - DOMAIN, adhoc4.net
   - DOMAIN, adhub.digital
-  - DOMAIN, adhunt.net
   - DOMAIN, adiquity.com
   - DOMAIN, adjectivedollaralmost.com
   - DOMAIN, adjoincomprise.com
@@ -19318,6 +19317,7 @@ payload:
   - DOMAIN, adhigh.net$third-party
   - DOMAIN, adhitzads.com$third-party
   - DOMAIN, adhostingsolutions.com$third-party
+  - DOMAIN, adhunt.net$third-party
   - DOMAIN, adicate.com$third-party
   - DOMAIN, adikteev.com$third-party
   - DOMAIN, adimise.com$third-party
@@ -19949,6 +19949,7 @@ payload:
   - DOMAIN, geo-idm.fr$third-party
   - DOMAIN, geopromos.com$third-party
   - DOMAIN, geovisite.com$third-party
+  - DOMAIN, geozo.com$third-party
   - DOMAIN, germaniavid.com$third-party
   - DOMAIN, gestionpub.com$third-party
   - DOMAIN, get.com$third-party
