@@ -30609,6 +30609,7 @@ payload:
   - DOMAIN, aralego.com$third-party
   - DOMAIN, arcadebannerexchange.org$third-party
   - DOMAIN, arcadechain.com$third-party
+  - DOMAIN, armanet.co$third-party
   - DOMAIN, artsai.com$third-party
   - DOMAIN, assemblyexchange.com$third-party
   - DOMAIN, assoc-amazon.ca$third-party
@@ -30927,6 +30928,7 @@ payload:
   - DOMAIN, forex-affiliate.com$third-party
   - DOMAIN, forexprostools.com$third-party
   - DOMAIN, free3dgame.xyz$third-party
+  - DOMAIN, freedomadnetwork.com$third-party
   - DOMAIN, freerotator.com$third-party
   - DOMAIN, friendlyduck.com$third-party
   - DOMAIN, fruitkings.com$third-party
