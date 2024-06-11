@@ -39553,6 +39553,7 @@ payload:
   - DOMAIN, adspeed.com$third-party
   - DOMAIN, adspruce.com$third-party
   - DOMAIN, adsquirrel.ai$third-party
+  - DOMAIN, adsreference.com$third-party
   - DOMAIN, adsring.com$third-party
   - DOMAIN, adsrv4k.com$third-party
   - DOMAIN, adsrvmedia.com$third-party
@@ -39581,7 +39582,6 @@ payload:
   - DOMAIN, adteractive.com$third-party
   - DOMAIN, adthrive.com$third-party
   - DOMAIN, adtival.network$third-party
-  - DOMAIN, adtraction.com$third-party
   - DOMAIN, adtrix.com$third-party
   - DOMAIN, adultadworld.com$third-party
   - DOMAIN, adultimate.net$third-party
@@ -40657,6 +40657,7 @@ payload:
   - DOMAIN, 295c.site$document,popup
   - DOMAIN, 2aeabdd4-3280-4f03-bc92-1890494f28be.xyz$document,popup
   - DOMAIN, 3a2e.site$document,popup
+  - DOMAIN, 420db600.xyz$document,popup
   - DOMAIN, 485728.xyz$document,popup
   - DOMAIN, 48a16802.site$document,popup
   - DOMAIN, 4a0e.xyz$document,popup
