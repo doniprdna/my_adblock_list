@@ -7610,6 +7610,7 @@ payload:
   - DOMAIN, dovictinian.com
   - DOMAIN, down1oads.com
   - DOMAIN, download-adblock-zen.com
+  - DOMAIN, download-privacybear.com
   - DOMAIN, download-ready.net
   - DOMAIN, download4.cfd
   - DOMAIN, download4allfree.com
@@ -28140,6 +28141,7 @@ payload:
   - DOMAIN, donkstar1.online$document
   - DOMAIN, donkstar2.online$document
   - DOMAIN, doostozoa.net$document
+  - DOMAIN, download-privacybear.com$document
   - DOMAIN, downloading-addon.com$document
   - DOMAIN, downloading-extension.com$document
   - DOMAIN, downlon.com$document
