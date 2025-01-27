@@ -30088,6 +30088,7 @@ payload:
   - DOMAIN, proper.io$third-party
   - DOMAIN, pub-3d10bad2840341eaa1c7e39b09958b46.r2.dev$third-party
   - DOMAIN, pub-referral-widget.current.us$third-party
+  - DOMAIN, pubcircle.ai$third-party
   - DOMAIN, pubdirecte.com$third-party
   - DOMAIN, pubfuture.com$third-party
   - DOMAIN, pubgears.com$third-party
@@ -30512,8 +30513,10 @@ payload:
   - DOMAIN, 605efe.xyz
   - DOMAIN, 62842068.xyz
   - DOMAIN, 634369.xyz
+  - DOMAIN, 63801782.xyz
   - DOMAIN, 6471e7f7.xyz
   - DOMAIN, 65035033.xyz
+  - DOMAIN, 65122038.xyz
   - DOMAIN, 656f1ba3.xyz
   - DOMAIN, 657475b7-0095-478d-90d4-96ce440604f9.online
   - DOMAIN, 65894140.xyz
